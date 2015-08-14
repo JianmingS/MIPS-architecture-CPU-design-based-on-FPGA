@@ -1,0 +1,7 @@
+verilog isim_temp "signext.v"
+verilog isim_temp "register.v"
+verilog isim_temp "Instruction_memory.v"
+verilog isim_temp "Ctr.v"
+verilog isim_temp "ALU.v"
+verilog isim_temp "top.v"
+verilog isim_temp "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

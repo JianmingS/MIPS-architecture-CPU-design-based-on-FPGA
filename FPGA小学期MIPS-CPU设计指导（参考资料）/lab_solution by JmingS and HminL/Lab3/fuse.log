@@ -1,0 +1,21 @@
+Running: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o E:/JmingProjects/ISE/Lab3/register_tb_isim_beh.exe -prj E:/JmingProjects/ISE/Lab3/register_tb_beh.prj work.register_tb work.glbl 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/JmingProjects/ISE/Lab3/register.v" into library work
+Analyzing Verilog file "E:/JmingProjects/ISE/Lab3/register_tb.v" into library work
+Analyzing Verilog file "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 97180 KB
+Fuse CPU Usage: 234 ms
+Compiling module register
+Compiling module register_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 3 Verilog Units
+Built simulation executable E:/JmingProjects/ISE/Lab3/register_tb_isim_beh.exe
+Fuse Memory Usage: 102652 KB
+Fuse CPU Usage: 234 ms

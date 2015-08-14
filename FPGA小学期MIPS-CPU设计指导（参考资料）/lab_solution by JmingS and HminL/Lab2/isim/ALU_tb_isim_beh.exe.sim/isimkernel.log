@@ -1,0 +1,28 @@
+Command line:
+   ALU_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  4647
+
+Sun Jul 05 20:12:45 2015
+
+
+ Elaboration Time: 0.109375 sec
+
+ Current Memory Usage: 404.689 Meg
+
+ Total Signals          : 19
+ Total Nets             : 114
+ Total Signal Drivers   : 10
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 13
+ Total Traceable Variables  : 22
+ Total Scalar Nets and Variables : 294
+
+ Total Simulation Time: 0.15625 sec
+
+ Current Memory Usage: 404.689 Meg
+
+Sun Jul 05 20:12:51 2015
+

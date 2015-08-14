@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompiler" num="530" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 21: Incorrect use of predefined macro <arg fmt="%s" index="1">include</arg>. Expected <arg fmt="%s" index="2">&quot;filename&quot;</arg>.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 22: Syntax error near &quot;<arg fmt="%s" index="1">module</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 21: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 28: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 29: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 30: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 31: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 32: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 33: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 34: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 35: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 36: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 38: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 39: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 40: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 42: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 43: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 44: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 45: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 46: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 47: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="unknown" >"E:/JmingProjects/ISE/Lab4_1/top.v" Line 50: Syntax error near &quot;<arg fmt="%s" index="1">assign</arg>&quot;.
+</msg>
+
+</messages>
+

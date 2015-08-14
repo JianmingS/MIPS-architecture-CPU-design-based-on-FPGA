@@ -1,0 +1,11 @@
+NET ClkIn LOC=D11; 
+
+### 8 bit led pins ###
+NET led<0> LOC=W3;
+NET led<1> LOC=Y4;
+NET led<2> LOC=Y1;
+NET led<3> LOC=Y3;
+NET led<4> LOC=AB4;
+NET led<5> LOC=W1;
+NET led<6> LOC=AB3;
+NET led<7> LOC=AA4;

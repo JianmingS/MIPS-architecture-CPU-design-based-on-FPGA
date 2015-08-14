@@ -1,0 +1,21 @@
+Running: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o E:/JmingProjects/ISE/Lab4/top_tb_isim_beh.exe -prj E:/JmingProjects/ISE/Lab4/top_tb_beh.prj work.top_tb work.glbl 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/JmingProjects/ISE/Lab4/Clk_gen.v" into library work
+Analyzing Verilog file "E:/JmingProjects/ISE/Lab4/top.v" into library work
+Analyzing Verilog file "E:/JmingProjects/ISE/Lab4/top_tb.v" into library work
+ERROR:HDLCompiler:1660 - "E:/JmingProjects/ISE/Lab4/top_tb.v" Line 43: Procedural assignment to a non-register ClkIn is not permitted, left-hand side should be reg/integer/time/genvar
+ERROR:HDLCompiler:1660 - "E:/JmingProjects/ISE/Lab4/top_tb.v" Line 43: Procedural assignment to a non-register ClkIn is not permitted, left-hand side should be reg/integer/time/genvar
+ERROR:HDLCompiler:1660 - "E:/JmingProjects/ISE/Lab4/top_tb.v" Line 44: Procedural assignment to a non-register Rst is not permitted, left-hand side should be reg/integer/time/genvar
+ERROR:HDLCompiler:1660 - "E:/JmingProjects/ISE/Lab4/top_tb.v" Line 44: Procedural assignment to a non-register Rst is not permitted, left-hand side should be reg/integer/time/genvar
+ERROR:HDLCompiler:69 - "E:/JmingProjects/ISE/Lab4/top_tb.v" Line 45: <Switch> is not declared.
+ERROR:HDLCompiler:1660 - "E:/JmingProjects/ISE/Lab4/top_tb.v" Line 47: Procedural assignment to a non-register Rst is not permitted, left-hand side should be reg/integer/time/genvar
+ERROR:HDLCompiler:1660 - "E:/JmingProjects/ISE/Lab4/top_tb.v" Line 47: Procedural assignment to a non-register Rst is not permitted, left-hand side should be reg/integer/time/genvar
+ERROR:HDLCompiler:1660 - "E:/JmingProjects/ISE/Lab4/top_tb.v" Line 49: Procedural assignment to a non-register Rst is not permitted, left-hand side should be reg/integer/time/genvar
+ERROR:HDLCompiler:1660 - "E:/JmingProjects/ISE/Lab4/top_tb.v" Line 49: Procedural assignment to a non-register Rst is not permitted, left-hand side should be reg/integer/time/genvar
+ERROR:HDLCompiler:1660 - "E:/JmingProjects/ISE/Lab4/top_tb.v" Line 56: Procedural assignment to a non-register ClkIn is not permitted, left-hand side should be reg/integer/time/genvar
+ERROR:HDLCompiler:1660 - "E:/JmingProjects/ISE/Lab4/top_tb.v" Line 56: Procedural assignment to a non-register ClkIn is not permitted, left-hand side should be reg/integer/time/genvar
+ERROR:HDLCompiler:598 - "E:/JmingProjects/ISE/Lab4/top_tb.v" Line 25: Module <top_tb> ignored due to previous errors.
+Verilog file E:/JmingProjects/ISE/Lab4/top_tb.v ignored due to errors

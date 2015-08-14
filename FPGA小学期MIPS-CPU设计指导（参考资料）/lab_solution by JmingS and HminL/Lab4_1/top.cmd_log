@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "E:/JmingProjects/ISE/Lab4_1/top.xst" -ofn "E:/JmingProjects/ISE/Lab4_1/top.syr" 

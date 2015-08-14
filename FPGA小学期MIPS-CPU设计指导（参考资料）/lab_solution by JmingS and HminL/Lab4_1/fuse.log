@@ -1,0 +1,30 @@
+Running: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/JmingProjects/ISE/Lab4_1/top_tb_isim_beh.exe -prj E:/JmingProjects/ISE/Lab4_1/top_tb_beh.prj work.top_tb work.glbl 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/JmingProjects/ISE/Lab4_1/ipcore_dir/Clk_gen.v" into library work
+Analyzing Verilog file "E:/JmingProjects/ISE/Lab4_1/top.v" into library work
+ERROR:HDLCompiler:530 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 21: Incorrect use of predefined macro include. Expected "filename".
+ERROR:HDLCompiler:806 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 22: Syntax error near "module".
+WARNING:HDLCompiler:1591 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 21: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 28: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 29: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 30: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 31: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 32: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 33: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 34: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 35: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 36: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 38: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 39: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 40: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 42: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 43: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 44: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 45: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 46: Root scope declaration is not allowed in verilog 95/2K mode
+WARNING:HDLCompiler:1591 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 47: Root scope declaration is not allowed in verilog 95/2K mode
+ERROR:HDLCompiler:806 - "E:/JmingProjects/ISE/Lab4_1/top.v" Line 50: Syntax error near "assign".
+Verilog file E:/JmingProjects/ISE/Lab4_1/top.v ignored due to errors

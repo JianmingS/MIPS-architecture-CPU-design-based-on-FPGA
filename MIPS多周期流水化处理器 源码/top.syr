@@ -1,0 +1,1447 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.30 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.30 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc6slx45-3-csg484
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\JmingProjects\ISE\Lab5_4\ipcore_dir\Clk_gen.v" into library work
+Parsing module <Clk_gen>.
+Analyzing Verilog file "E:\JmingProjects\ISE\Lab5_4\signext.v" into library work
+Parsing module <signext>.
+Analyzing Verilog file "E:\JmingProjects\ISE\Lab5_4\register.v" into library work
+Parsing module <register>.
+Analyzing Verilog file "E:\JmingProjects\ISE\Lab5_4\Instruction_memory.v" into library work
+Parsing module <Instruction_memory>.
+Analyzing Verilog file "E:\JmingProjects\ISE\Lab5_4\Data_memory.v" into library work
+Parsing module <Data_memory>.
+Analyzing Verilog file "E:\JmingProjects\ISE\Lab5_4\Ctr.v" into library work
+Parsing module <Ctr>.
+Analyzing Verilog file "E:\JmingProjects\ISE\Lab5_4\ALU.v" into library work
+Parsing module <ALU>.
+Analyzing Verilog file "E:\JmingProjects\ISE\Lab5_4\top.v" into library work
+Parsing module <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top>.
+
+Elaborating module <Clk_gen>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=25,CLKFX_MULTIPLY=8,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=10.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "E:\JmingProjects\ISE\Lab5_4\ipcore_dir\Clk_gen.v" Line 130: Assignment to status_int ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+
+Elaborating module <Instruction_memory>.
+Reading initialization file \"instruction\".
+WARNING:HDLCompiler:1670 - "E:\JmingProjects\ISE\Lab5_4\Instruction_memory.v" Line 30: Signal <InstMem> in initial block is partially initialized.
+WARNING:HDLCompiler:91 - "E:\JmingProjects\ISE\Lab5_4\Instruction_memory.v" Line 36: Signal <InstMem> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <Ctr>.
+WARNING:HDLCompiler:91 - "E:\JmingProjects\ISE\Lab5_4\Ctr.v" Line 230: Signal <OpCode> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <ALU>.
+WARNING:HDLCompiler:413 - "E:\JmingProjects\ISE\Lab5_4\ALU.v" Line 38: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "E:\JmingProjects\ISE\Lab5_4\ALU.v" Line 39: Assignment to OverFlow ignored, since the identifier is never used
+
+Elaborating module <Data_memory>.
+Reading initialization file \"Data\".
+WARNING:HDLCompiler:1670 - "E:\JmingProjects\ISE\Lab5_4\Data_memory.v" Line 32: Signal <DataMem> in initial block is partially initialized.
+
+Elaborating module <register>.
+Reading initialization file \"register\".
+
+Elaborating module <signext>.
+WARNING:HDLCompiler:413 - "E:\JmingProjects\ISE\Lab5_4\top.v" Line 254: Result of 32-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:1127 - "E:\JmingProjects\ISE\Lab5_4\top.v" Line 310: Assignment to ALUControlE_Reg ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\JmingProjects\ISE\Lab5_4\top.v" Line 345: Assignment to MemWriteM_Reg ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "E:\JmingProjects\ISE\Lab5_4\top.v".
+INFO:Xst:3210 - "E:\JmingProjects\ISE\Lab5_4\top.v" line 167: Output port <LOCKED> of the instance <Clock> is unconnected or connected to loadless signal.
+    Found 32-bit register for signal <PCF>.
+    Found 32-bit register for signal <InstructionF_Reg>.
+    Found 32-bit register for signal <RegARdDataD_Reg>.
+    Found 32-bit register for signal <RegBRdDataD_Reg>.
+    Found 5-bit register for signal <RtE_Reg>.
+    Found 5-bit register for signal <RdE_Reg>.
+    Found 32-bit register for signal <SignImmD_Reg>.
+    Found 32-bit register for signal <PCPlus4D_Reg>.
+    Found 1-bit register for signal <RegWriteForCtrD_Reg>.
+    Found 1-bit register for signal <MemtoRegD_Reg>.
+    Found 1-bit register for signal <MemWriteD_Reg>.
+    Found 1-bit register for signal <BranchD_Reg>.
+    Found 5-bit register for signal <ALUControlD_Reg>.
+    Found 1-bit register for signal <ALUSrcD_Reg>.
+    Found 1-bit register for signal <RegDstD_Reg>.
+    Found 1-bit register for signal <Judge_RegD>.
+    Found 1-bit register for signal <RegWriteForCtrE_Reg>.
+    Found 1-bit register for signal <MemtoRegE_Reg>.
+    Found 1-bit register for signal <MemWriteE_Reg>.
+    Found 1-bit register for signal <BranchE_Reg>.
+    Found 1-bit register for signal <ZeroE_Reg>.
+    Found 32-bit register for signal <ALUResE_Reg>.
+    Found 32-bit register for signal <WriteDataE_Reg>.
+    Found 5-bit register for signal <WriteRegE_Reg>.
+    Found 32-bit register for signal <PCBranchE_Reg>.
+    Found 1-bit register for signal <RegWriteForCtrM_Reg>.
+    Found 1-bit register for signal <MemtoRegM_Reg>.
+    Found 32-bit register for signal <DmemAddrM_Reg>.
+    Found 32-bit register for signal <DmemRdDataM_Reg>.
+    Found 5-bit register for signal <WriteRegW<4:0>>.
+    Found 32-bit register for signal <PCPlus4F_Reg>.
+    Found 5-bit register for signal <SrcAInput_RegD>.
+    Found 32-bit adder for signal <PCPlus4F> created at line 242.
+    Found 32-bit adder for signal <SignImmE[29]_PCPlus4E[31]_add_44_OUT> created at line 327.
+    WARNING:Xst:2404 -  FFs/Latches <SrcAInput_RegD<31:5>> (without init value) have a constant value of 0 in block <top>.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 428 D-type flip-flop(s).
+	inferred   6 Multiplexer(s).
+Unit <top> synthesized.
+
+Synthesizing Unit <Clk_gen>.
+    Related source file is "E:\JmingProjects\ISE\Lab5_4\ipcore_dir\Clk_gen.v".
+    Summary:
+	no macro.
+Unit <Clk_gen> synthesized.
+
+Synthesizing Unit <Instruction_memory>.
+    Related source file is "E:\JmingProjects\ISE\Lab5_4\Instruction_memory.v".
+WARNING:Xst:647 - Input <ImemRdAddr<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ImemRdAddr<31:10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2999 - Signal 'InstMem', unconnected in block 'Instruction_memory', is tied to its initial value.
+    Found 256x32-bit single-port Read Only RAM <Mram_InstMem> for signal <InstMem>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <Instruction_memory> synthesized.
+
+Synthesizing Unit <Ctr>.
+    Related source file is "E:\JmingProjects\ISE\Lab5_4\Ctr.v".
+WARNING:Xst:737 - Found 1-bit latch for signal <ALUSrcD>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemtoRegD>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <RegWriteD>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemWriteD>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <BranchD>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALUOp<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALUOp<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <RegDstD>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   8 Latch(s).
+	inferred  31 Multiplexer(s).
+Unit <Ctr> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "E:\JmingProjects\ISE\Lab5_4\ALU.v".
+    Found 32-bit subtractor for signal <SrcA[31]_SrcB[31]_sub_21_OUT> created at line 106.
+    Found 32-bit adder for signal <SrcA[31]_SrcB[31]_add_26_OUT> created at line 113.
+    Found 1-bit adder for signal <SrcB[31]_PWR_16_o_add_32_OUT<0>> created at line 127.
+    Found 32-bit adder for signal <SrcA[31]_SrcB[31]_add_33_OUT> created at line 128.
+    Found 64x64-bit multiplier for signal <n0030> created at line 62.
+    Found 32-bit shifter logical left for signal <SrcB[31]_SrcA[31]_shift_left_9_OUT> created at line 68
+    Found 32-bit shifter logical right for signal <SrcB[31]_SrcA[31]_shift_right_17_OUT> created at line 86
+    Found 32x32-bit multiplier for signal <n0045> created at line 148.
+    Found 32-bit 24-to-1 multiplexer for signal <ALURes> created at line 47.
+    Found 32-bit comparator greater for signal <SrcA[31]_SrcB[31]_LessThan_16_o> created at line 73
+    Found 32-bit comparator lessequal for signal <n0017> created at line 109
+    Summary:
+	inferred   2 Multiplier(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred   4 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <ALU> synthesized.
+
+Synthesizing Unit <div_32u_32u>.
+    Related source file is "".
+    Found 64-bit adder for signal <n3436> created at line 0.
+    Found 64-bit adder for signal <GND_17_o_b[31]_add_1_OUT> created at line 0.
+    Found 63-bit adder for signal <n3440> created at line 0.
+    Found 63-bit adder for signal <GND_17_o_b[31]_add_3_OUT> created at line 0.
+    Found 62-bit adder for signal <n3444> created at line 0.
+    Found 62-bit adder for signal <GND_17_o_b[31]_add_5_OUT> created at line 0.
+    Found 61-bit adder for signal <n3448> created at line 0.
+    Found 61-bit adder for signal <GND_17_o_b[31]_add_7_OUT> created at line 0.
+    Found 60-bit adder for signal <n3452> created at line 0.
+    Found 60-bit adder for signal <GND_17_o_b[31]_add_9_OUT> created at line 0.
+    Found 59-bit adder for signal <n3456> created at line 0.
+    Found 59-bit adder for signal <GND_17_o_b[31]_add_11_OUT> created at line 0.
+    Found 58-bit adder for signal <n3460> created at line 0.
+    Found 58-bit adder for signal <GND_17_o_b[31]_add_13_OUT> created at line 0.
+    Found 57-bit adder for signal <n3464> created at line 0.
+    Found 57-bit adder for signal <GND_17_o_b[31]_add_15_OUT> created at line 0.
+    Found 56-bit adder for signal <n3468> created at line 0.
+    Found 56-bit adder for signal <GND_17_o_b[31]_add_17_OUT> created at line 0.
+    Found 55-bit adder for signal <n3472> created at line 0.
+    Found 55-bit adder for signal <GND_17_o_b[31]_add_19_OUT> created at line 0.
+    Found 54-bit adder for signal <n3476> created at line 0.
+    Found 54-bit adder for signal <GND_17_o_b[31]_add_21_OUT> created at line 0.
+    Found 53-bit adder for signal <n3480> created at line 0.
+    Found 53-bit adder for signal <GND_17_o_b[31]_add_23_OUT> created at line 0.
+    Found 52-bit adder for signal <n3484> created at line 0.
+    Found 52-bit adder for signal <GND_17_o_b[31]_add_25_OUT> created at line 0.
+    Found 51-bit adder for signal <n3488> created at line 0.
+    Found 51-bit adder for signal <GND_17_o_b[31]_add_27_OUT> created at line 0.
+    Found 50-bit adder for signal <n3492> created at line 0.
+    Found 50-bit adder for signal <GND_17_o_b[31]_add_29_OUT> created at line 0.
+    Found 49-bit adder for signal <n3496> created at line 0.
+    Found 49-bit adder for signal <GND_17_o_b[31]_add_31_OUT> created at line 0.
+    Found 48-bit adder for signal <n3500> created at line 0.
+    Found 48-bit adder for signal <GND_17_o_b[31]_add_33_OUT> created at line 0.
+    Found 47-bit adder for signal <n3504> created at line 0.
+    Found 47-bit adder for signal <GND_17_o_b[31]_add_35_OUT> created at line 0.
+    Found 46-bit adder for signal <n3508> created at line 0.
+    Found 46-bit adder for signal <GND_17_o_b[31]_add_37_OUT> created at line 0.
+    Found 45-bit adder for signal <n3512> created at line 0.
+    Found 45-bit adder for signal <GND_17_o_b[31]_add_39_OUT> created at line 0.
+    Found 44-bit adder for signal <n3516> created at line 0.
+    Found 44-bit adder for signal <GND_17_o_b[31]_add_41_OUT> created at line 0.
+    Found 43-bit adder for signal <n3520> created at line 0.
+    Found 43-bit adder for signal <GND_17_o_b[31]_add_43_OUT> created at line 0.
+    Found 42-bit adder for signal <n3524> created at line 0.
+    Found 42-bit adder for signal <GND_17_o_b[31]_add_45_OUT> created at line 0.
+    Found 41-bit adder for signal <n3528> created at line 0.
+    Found 41-bit adder for signal <GND_17_o_b[31]_add_47_OUT> created at line 0.
+    Found 40-bit adder for signal <n3532> created at line 0.
+    Found 40-bit adder for signal <GND_17_o_b[31]_add_49_OUT> created at line 0.
+    Found 39-bit adder for signal <n3536> created at line 0.
+    Found 39-bit adder for signal <GND_17_o_b[31]_add_51_OUT> created at line 0.
+    Found 38-bit adder for signal <n3540> created at line 0.
+    Found 38-bit adder for signal <GND_17_o_b[31]_add_53_OUT> created at line 0.
+    Found 37-bit adder for signal <n3544> created at line 0.
+    Found 37-bit adder for signal <GND_17_o_b[31]_add_55_OUT> created at line 0.
+    Found 36-bit adder for signal <n3548> created at line 0.
+    Found 36-bit adder for signal <GND_17_o_b[31]_add_57_OUT> created at line 0.
+    Found 35-bit adder for signal <n3552> created at line 0.
+    Found 35-bit adder for signal <GND_17_o_b[31]_add_59_OUT> created at line 0.
+    Found 34-bit adder for signal <n3556> created at line 0.
+    Found 34-bit adder for signal <GND_17_o_b[31]_add_61_OUT> created at line 0.
+    Found 33-bit adder for signal <n3560> created at line 0.
+    Found 33-bit adder for signal <GND_17_o_b[31]_add_63_OUT> created at line 0.
+    Found 64-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 63-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 62-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 61-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 60-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 59-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 58-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 57-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 56-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 55-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 54-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 53-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 52-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 51-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 50-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 49-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 48-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 47-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 46-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 45-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 44-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 43-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 42-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 41-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 40-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 39-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 38-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Found 37-bit comparator lessequal for signal <BUS_0028> created at line 0
+    Found 36-bit comparator lessequal for signal <BUS_0029> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0030> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0031> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0032> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0033> created at line 0
+    Summary:
+	inferred  64 Adder/Subtractor(s).
+	inferred  33 Comparator(s).
+	inferred 993 Multiplexer(s).
+Unit <div_32u_32u> synthesized.
+
+Synthesizing Unit <Data_memory>.
+    Related source file is "E:\JmingProjects\ISE\Lab5_4\Data_memory.v".
+WARNING:Xst:647 - Input <DmemAddr<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DmemAddr<31:10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 256x32-bit single-port RAM <Mram_DataMem> for signal <DataMem>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Multiplexer(s).
+Unit <Data_memory> synthesized.
+
+Synthesizing Unit <register>.
+    Related source file is "E:\JmingProjects\ISE\Lab5_4\register.v".
+    Found 32x32-bit dual-port RAM <Mram_regFile> for signal <regFile>.
+    Summary:
+	inferred   2 RAM(s).
+	inferred   2 Multiplexer(s).
+Unit <register> synthesized.
+
+Synthesizing Unit <signext>.
+    Related source file is "E:\JmingProjects\ISE\Lab5_4\signext.v".
+    Summary:
+	no macro.
+Unit <signext> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 256x32-bit single-port RAM                            : 1
+ 256x32-bit single-port Read Only RAM                  : 1
+ 32x32-bit dual-port RAM                               : 2
+# Multipliers                                          : 2
+ 32x32-bit multiplier                                  : 1
+ 64x64-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 70
+ 1-bit adder                                           : 1
+ 32-bit adder                                          : 4
+ 32-bit subtractor                                     : 1
+ 33-bit adder                                          : 2
+ 34-bit adder                                          : 2
+ 35-bit adder                                          : 2
+ 36-bit adder                                          : 2
+ 37-bit adder                                          : 2
+ 38-bit adder                                          : 2
+ 39-bit adder                                          : 2
+ 40-bit adder                                          : 2
+ 41-bit adder                                          : 2
+ 42-bit adder                                          : 2
+ 43-bit adder                                          : 2
+ 44-bit adder                                          : 2
+ 45-bit adder                                          : 2
+ 46-bit adder                                          : 2
+ 47-bit adder                                          : 2
+ 48-bit adder                                          : 2
+ 49-bit adder                                          : 2
+ 50-bit adder                                          : 2
+ 51-bit adder                                          : 2
+ 52-bit adder                                          : 2
+ 53-bit adder                                          : 2
+ 54-bit adder                                          : 2
+ 55-bit adder                                          : 2
+ 56-bit adder                                          : 2
+ 57-bit adder                                          : 2
+ 58-bit adder                                          : 2
+ 59-bit adder                                          : 2
+ 60-bit adder                                          : 2
+ 61-bit adder                                          : 2
+ 62-bit adder                                          : 2
+ 63-bit adder                                          : 2
+ 64-bit adder                                          : 2
+# Registers                                            : 32
+ 1-bit register                                        : 14
+ 32-bit register                                       : 12
+ 5-bit register                                        : 6
+# Latches                                              : 8
+ 1-bit latch                                           : 8
+# Comparators                                          : 35
+ 32-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 2
+ 33-bit comparator lessequal                           : 1
+ 34-bit comparator lessequal                           : 1
+ 35-bit comparator lessequal                           : 1
+ 36-bit comparator lessequal                           : 1
+ 37-bit comparator lessequal                           : 1
+ 38-bit comparator lessequal                           : 1
+ 39-bit comparator lessequal                           : 1
+ 40-bit comparator lessequal                           : 1
+ 41-bit comparator lessequal                           : 1
+ 42-bit comparator lessequal                           : 1
+ 43-bit comparator lessequal                           : 1
+ 44-bit comparator lessequal                           : 1
+ 45-bit comparator lessequal                           : 1
+ 46-bit comparator lessequal                           : 1
+ 47-bit comparator lessequal                           : 1
+ 48-bit comparator lessequal                           : 1
+ 49-bit comparator lessequal                           : 1
+ 50-bit comparator lessequal                           : 1
+ 51-bit comparator lessequal                           : 1
+ 52-bit comparator lessequal                           : 1
+ 53-bit comparator lessequal                           : 1
+ 54-bit comparator lessequal                           : 1
+ 55-bit comparator lessequal                           : 1
+ 56-bit comparator lessequal                           : 1
+ 57-bit comparator lessequal                           : 1
+ 58-bit comparator lessequal                           : 1
+ 59-bit comparator lessequal                           : 1
+ 60-bit comparator lessequal                           : 1
+ 61-bit comparator lessequal                           : 1
+ 62-bit comparator lessequal                           : 1
+ 63-bit comparator lessequal                           : 1
+ 64-bit comparator lessequal                           : 1
+# Multiplexers                                         : 1037
+ 1-bit 2-to-1 multiplexer                              : 993
+ 32-bit 2-to-1 multiplexer                             : 11
+ 32-bit 24-to-1 multiplexer                            : 1
+ 5-bit 2-to-1 multiplexer                              : 32
+# Logic shifters                                       : 2
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Data_memory>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_DataMem> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 32-bit                   |          |
+    |     clkA           | connected to signal <Clk>           | rise     |
+    |     weA            | connected to signal <DmemWrite>     | high     |
+    |     addrA          | connected to signal <DmemAddr>      |          |
+    |     diA            | connected to signal <DmemWrData>    |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <Data_memory> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Instruction_memory>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_InstMem> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 32-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ImemRdAddr>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <Instruction_memory> synthesized (advanced).
+
+Synthesizing (advanced) Unit <register>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_regFile> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <Clk>           | rise     |
+    |     weA            | connected to signal <RegWrite>      | high     |
+    |     addrA          | connected to signal <RegWrAddr>     |          |
+    |     diA            | connected to signal <RegWrData>     |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <RegARdAddr>    |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_regFile1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <Clk>           | rise     |
+    |     weA            | connected to signal <RegWrite>      | high     |
+    |     addrA          | connected to signal <RegWrAddr>     |          |
+    |     diA            | connected to signal <RegWrData>     |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <RegBRdAddr>    |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <register> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 256x32-bit single-port distributed RAM                : 1
+ 256x32-bit single-port distributed Read Only RAM      : 1
+ 32x32-bit dual-port distributed RAM                   : 2
+# Multipliers                                          : 2
+ 32x32-bit multiplier                                  : 2
+# Adders/Subtractors                                   : 38
+ 1-bit adder                                           : 1
+ 32-bit adder                                          : 4
+ 32-bit adder carry in                                 : 32
+ 32-bit subtractor                                     : 1
+# Registers                                            : 428
+ Flip-Flops                                            : 428
+# Comparators                                          : 35
+ 32-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 2
+ 33-bit comparator lessequal                           : 1
+ 34-bit comparator lessequal                           : 1
+ 35-bit comparator lessequal                           : 1
+ 36-bit comparator lessequal                           : 1
+ 37-bit comparator lessequal                           : 1
+ 38-bit comparator lessequal                           : 1
+ 39-bit comparator lessequal                           : 1
+ 40-bit comparator lessequal                           : 1
+ 41-bit comparator lessequal                           : 1
+ 42-bit comparator lessequal                           : 1
+ 43-bit comparator lessequal                           : 1
+ 44-bit comparator lessequal                           : 1
+ 45-bit comparator lessequal                           : 1
+ 46-bit comparator lessequal                           : 1
+ 47-bit comparator lessequal                           : 1
+ 48-bit comparator lessequal                           : 1
+ 49-bit comparator lessequal                           : 1
+ 50-bit comparator lessequal                           : 1
+ 51-bit comparator lessequal                           : 1
+ 52-bit comparator lessequal                           : 1
+ 53-bit comparator lessequal                           : 1
+ 54-bit comparator lessequal                           : 1
+ 55-bit comparator lessequal                           : 1
+ 56-bit comparator lessequal                           : 1
+ 57-bit comparator lessequal                           : 1
+ 58-bit comparator lessequal                           : 1
+ 59-bit comparator lessequal                           : 1
+ 60-bit comparator lessequal                           : 1
+ 61-bit comparator lessequal                           : 1
+ 62-bit comparator lessequal                           : 1
+ 63-bit comparator lessequal                           : 1
+ 64-bit comparator lessequal                           : 1
+# Multiplexers                                         : 1068
+ 1-bit 2-to-1 multiplexer                              : 1025
+ 32-bit 2-to-1 multiplexer                             : 10
+ 32-bit 24-to-1 multiplexer                            : 1
+ 5-bit 2-to-1 multiplexer                              : 32
+# Logic shifters                                       : 2
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <ALUOp_0> in Unit <Ctr> is equivalent to the following FF/Latch, which will be removed : <BranchD> 
+INFO:Xst:2261 - The FF/Latch <ALUOp_1> in Unit <Ctr> is equivalent to the following FF/Latch, which will be removed : <RegDstD> 
+WARNING:Xst:2677 - Node <Mmult_n00453> of sequential type is unconnected in block <ALU>.
+WARNING:Xst:2677 - Node <Mmult_n00303> of sequential type is unconnected in block <ALU>.
+
+Optimizing unit <Clk_gen> ...
+
+Optimizing unit <signext> ...
+
+Optimizing unit <top> ...
+
+Optimizing unit <Instruction_memory> ...
+
+Optimizing unit <Data_memory> ...
+
+Optimizing unit <register> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <div_32u_32u> ...
+
+Optimizing unit <Ctr> ...
+WARNING:Xst:1710 - FF/Latch <SignImmD_Reg_31> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SignImmD_Reg_30> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SignImmD_Reg_29> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SignImmD_Reg_28> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SignImmD_Reg_27> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SignImmD_Reg_26> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SignImmD_Reg_25> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SignImmD_Reg_24> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SignImmD_Reg_23> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SignImmD_Reg_22> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SignImmD_Reg_21> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SignImmD_Reg_20> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SignImmD_Reg_19> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SignImmD_Reg_18> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SignImmD_Reg_17> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SignImmD_Reg_16> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SignImmD_Reg_15> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SignImmD_Reg_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <InstructionF_Reg_30> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <InstructionF_Reg_15> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <InstructionF_Reg_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <SrcAInput_RegD_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RdE_Reg_4> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_0> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_10> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_11> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_14> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_15> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_16> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_17> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_18> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_19> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_20> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_21> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_22> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_23> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_24> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_25> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_26> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_27> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_28> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_29> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_30> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4F_Reg_31> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_0> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_10> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_11> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_14> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_15> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_16> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_17> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_18> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_19> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_20> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_21> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_22> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_23> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_24> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_25> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_26> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_27> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_28> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_29> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_30> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCPlus4D_Reg_31> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_0> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_10> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_11> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_14> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_15> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_16> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_17> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_18> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_19> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_20> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_21> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_22> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_23> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_24> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_25> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_26> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_27> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_28> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_29> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_30> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCBranchE_Reg_31> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_0> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_10> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_11> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_14> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_15> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_16> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_17> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_18> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_19> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_20> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_21> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_22> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_23> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_24> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_25> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_26> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_27> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_28> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_29> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_30> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PCF_31> of sequential type is unconnected in block <top>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 4.
+FlipFlop ALUSrcD_Reg has been replicated 1 time(s)
+FlipFlop Judge_RegD has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <top> :
+	Found 2-bit shift register for signal <PCPlus4D_Reg_2>.
+	Found 2-bit shift register for signal <PCPlus4D_Reg_3>.
+	Found 2-bit shift register for signal <PCPlus4D_Reg_4>.
+	Found 2-bit shift register for signal <PCPlus4D_Reg_5>.
+	Found 2-bit shift register for signal <PCPlus4D_Reg_6>.
+	Found 2-bit shift register for signal <PCPlus4D_Reg_7>.
+	Found 2-bit shift register for signal <PCPlus4D_Reg_8>.
+	Found 2-bit shift register for signal <PCPlus4D_Reg_9>.
+	Found 2-bit shift register for signal <MemWriteE_Reg>.
+	Found 2-bit shift register for signal <BranchE_Reg>.
+	Found 3-bit shift register for signal <MemtoRegM_Reg>.
+	Found 3-bit shift register for signal <RegWriteForCtrM_Reg>.
+Unit <top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 286
+ Flip-Flops                                            : 286
+# Shift Registers                                      : 12
+ 2-bit shift register                                  : 10
+ 3-bit shift register                                  : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 4104
+#      GND                         : 5
+#      INV                         : 7
+#      LUT1                        : 6
+#      LUT2                        : 203
+#      LUT3                        : 369
+#      LUT4                        : 595
+#      LUT5                        : 547
+#      LUT6                        : 810
+#      MUXCY                       : 955
+#      MUXF7                       : 11
+#      VCC                         : 3
+#      XORCY                       : 593
+# FlipFlops/Latches                : 304
+#      FD                          : 283
+#      FDE                         : 12
+#      FDR                         : 3
+#      LD                          : 6
+# RAMS                             : 46
+#      RAM256X1S                   : 32
+#      RAM32M                      : 10
+#      RAM32X1D                    : 4
+# Shift Registers                  : 12
+#      SRLC16E                     : 12
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 42
+#      IBUF                        : 1
+#      IBUFG                       : 1
+#      OBUF                        : 40
+# DCMs                             : 1
+#      DCM_SP                      : 1
+# DSPs                             : 6
+#      DSP48A1                     : 6
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45csg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             304  out of  54576     0%  
+ Number of Slice LUTs:                 2725  out of  27288     9%  
+    Number used as Logic:              2537  out of  27288     9%  
+    Number used as Memory:              188  out of   6408     2%  
+       Number used as RAM:              176
+       Number used as SRL:               12
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2892
+   Number with an unused Flip Flop:    2588  out of   2892    89%  
+   Number with an unused LUT:           167  out of   2892     5%  
+   Number of fully used LUT-FF pairs:   137  out of   2892     4%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                          42
+ Number of bonded IOBs:                  41  out of    320    12%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+ Number of DSP48A1s:                      6  out of     58    10%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)   | Load  |
+-----------------------------------+-------------------------+-------+
+ClkIn                              | DCM_SP:CLKFX            | 356   |
+myCtr/_n0222(myCtr/_n02221:O)      | NONE(*)(myCtr/MemWriteD)| 6     |
+-----------------------------------+-------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 34.958ns (Maximum Frequency: 28.606MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 6.312ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ClkIn'
+  Clock period: 34.958ns (frequency: 28.606MHz)
+  Total number of paths / destination ports: 203456339247156130000000000000000000000000000000000 / 794
+-------------------------------------------------------------------------
+Delay:               109.243ns (Levels of Logic = 425)
+  Source:            ALUSrcD_Reg_1 (FF)
+  Destination:       ZeroE_Reg (FF)
+  Source Clock:      ClkIn rising 0.3X
+  Destination Clock: ClkIn rising 0.3X
+
+  Data Path: ALUSrcD_Reg_1 to ZeroE_Reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              15   0.447   0.982  ALUSrcD_Reg_1 (ALUSrcD_Reg_1)
+     LUT3:I2->O          134   0.205   2.311  mux1101 (SrcBE<0>)
+     begin scope: 'myALU:SrcB<0>'
+     begin scope: 'myALU/SrcA[31]_SrcB[31]_div_39:b<0>'
+     LUT5:I0->O            0   0.203   0.000  Mcompar_o<31>_lutdi (Mcompar_o<31>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_o<31>_cy<0> (Mcompar_o<31>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<31>_cy<1> (Mcompar_o<31>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<31>_cy<2> (Mcompar_o<31>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<31>_cy<3> (Mcompar_o<31>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<31>_cy<4> (Mcompar_o<31>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<31>_cy<5> (Mcompar_o<31>_cy<5>)
+     MUXCY:CI->O           4   0.213   0.684  Mcompar_o<31>_cy<6> (o<31>)
+     LUT3:I2->O            2   0.205   0.864  Mmux_a[0]_GND_17_o_MUX_286_o1241 (a[31]_GND_17_o_MUX_255_o)
+     LUT5:I1->O            0   0.203   0.000  Mcompar_o<30>_lutdi (Mcompar_o<30>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_o<30>_cy<0> (Mcompar_o<30>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<30>_cy<1> (Mcompar_o<30>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<30>_cy<2> (Mcompar_o<30>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<30>_cy<3> (Mcompar_o<30>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<30>_cy<4> (Mcompar_o<30>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<30>_cy<5> (Mcompar_o<30>_cy<5>)
+     MUXCY:CI->O           7   0.213   0.774  Mcompar_o<30>_cy<6> (o<30>)
+     LUT3:I2->O            5   0.205   0.962  Mmux_a[0]_GND_17_o_MUX_410_o1231 (a[30]_GND_17_o_MUX_380_o)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_o<29>_lutdi (Mcompar_o<29>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_o<29>_cy<0> (Mcompar_o<29>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<29>_cy<1> (Mcompar_o<29>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<29>_cy<2> (Mcompar_o<29>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<29>_cy<3> (Mcompar_o<29>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<29>_cy<4> (Mcompar_o<29>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<29>_cy<5> (Mcompar_o<29>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<29>_cy<6> (Mcompar_o<29>_cy<6>)
+     MUXCY:CI->O           9   0.213   0.830  Mcompar_o<29>_cy<7> (o<29>)
+     LUT3:I2->O            4   0.205   0.931  Mmux_a[0]_GND_17_o_MUX_532_o1211 (a[29]_GND_17_o_MUX_503_o)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_o<28>_lutdi (Mcompar_o<28>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_o<28>_cy<0> (Mcompar_o<28>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<28>_cy<1> (Mcompar_o<28>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<28>_cy<2> (Mcompar_o<28>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<28>_cy<3> (Mcompar_o<28>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<28>_cy<4> (Mcompar_o<28>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<28>_cy<5> (Mcompar_o<28>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<28>_cy<6> (Mcompar_o<28>_cy<6>)
+     MUXCY:CI->O          11   0.213   0.883  Mcompar_o<28>_cy<7> (o<28>)
+     LUT6:I5->O            7   0.205   1.002  Mmux_a[0]_GND_17_o_MUX_652_o1211 (a[29]_GND_17_o_MUX_623_o)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_o<27>_lut<1> (Mcompar_o<27>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_o<27>_cy<1> (Mcompar_o<27>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<27>_cy<2> (Mcompar_o<27>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<27>_cy<3> (Mcompar_o<27>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<27>_cy<4> (Mcompar_o<27>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<27>_cy<5> (Mcompar_o<27>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<27>_cy<6> (Mcompar_o<27>_cy<6>)
+     MUXCY:CI->O          15   0.213   0.982  Mcompar_o<27>_cy<7> (o<27>)
+     LUT6:I5->O            6   0.205   0.973  Mmux_a[0]_GND_17_o_MUX_770_o1201 (a[28]_GND_17_o_MUX_742_o)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_o<26>_lut<1> (Mcompar_o<26>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_o<26>_cy<1> (Mcompar_o<26>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<26>_cy<2> (Mcompar_o<26>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<26>_cy<3> (Mcompar_o<26>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<26>_cy<4> (Mcompar_o<26>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<26>_cy<5> (Mcompar_o<26>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<26>_cy<6> (Mcompar_o<26>_cy<6>)
+     MUXCY:CI->O          24   0.213   1.173  Mcompar_o<26>_cy<7> (o<26>)
+     LUT3:I2->O            3   0.205   0.898  Mmux_a[0]_GND_17_o_MUX_886_o1181 (a[26]_GND_17_o_MUX_860_o)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_o<25>_lutdi (Mcompar_o<25>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_o<25>_cy<0> (Mcompar_o<25>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<25>_cy<1> (Mcompar_o<25>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<25>_cy<2> (Mcompar_o<25>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<25>_cy<3> (Mcompar_o<25>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<25>_cy<4> (Mcompar_o<25>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<25>_cy<5> (Mcompar_o<25>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<25>_cy<6> (Mcompar_o<25>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<25>_cy<7> (Mcompar_o<25>_cy<7>)
+     MUXCY:CI->O          24   0.213   1.173  Mcompar_o<25>_cy<8> (o<25>)
+     LUT5:I4->O            5   0.205   0.943  Mmux_a[0]_GND_17_o_MUX_1000_o1181 (a[26]_GND_17_o_MUX_974_o)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_o<24>_lut<1> (Mcompar_o<24>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_o<24>_cy<1> (Mcompar_o<24>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<24>_cy<2> (Mcompar_o<24>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<24>_cy<3> (Mcompar_o<24>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<24>_cy<4> (Mcompar_o<24>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<24>_cy<5> (Mcompar_o<24>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<24>_cy<6> (Mcompar_o<24>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<24>_cy<7> (Mcompar_o<24>_cy<7>)
+     MUXCY:CI->O          32   0.213   1.292  Mcompar_o<24>_cy<8> (o<24>)
+     LUT3:I2->O            3   0.205   0.898  Mmux_a[0]_GND_17_o_MUX_1112_o1161 (a[24]_GND_17_o_MUX_1088_o)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_o<23>_lutdi (Mcompar_o<23>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_o<23>_cy<0> (Mcompar_o<23>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<23>_cy<1> (Mcompar_o<23>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<23>_cy<2> (Mcompar_o<23>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<23>_cy<3> (Mcompar_o<23>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<23>_cy<4> (Mcompar_o<23>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<23>_cy<5> (Mcompar_o<23>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<23>_cy<6> (Mcompar_o<23>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<23>_cy<7> (Mcompar_o<23>_cy<7>)
+     MUXCY:CI->O          30   0.213   1.264  Mcompar_o<23>_cy<8> (o<23>)
+     LUT5:I4->O            5   0.205   0.943  Mmux_a[0]_GND_17_o_MUX_1222_o1161 (a[24]_GND_17_o_MUX_1198_o)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_o<22>_lut<1> (Mcompar_o<22>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_o<22>_cy<1> (Mcompar_o<22>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<22>_cy<2> (Mcompar_o<22>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<22>_cy<3> (Mcompar_o<22>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<22>_cy<4> (Mcompar_o<22>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<22>_cy<5> (Mcompar_o<22>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<22>_cy<6> (Mcompar_o<22>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<22>_cy<7> (Mcompar_o<22>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<22>_cy<8> (Mcompar_o<22>_cy<8>)
+     MUXCY:CI->O          40   0.213   1.406  Mcompar_o<22>_cy<9> (o<22>)
+     LUT3:I2->O            3   0.205   0.898  Mmux_a[0]_GND_17_o_MUX_1330_o1141 (a[22]_GND_17_o_MUX_1308_o)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_o<21>_lutdi (Mcompar_o<21>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_o<21>_cy<0> (Mcompar_o<21>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<21>_cy<1> (Mcompar_o<21>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<21>_cy<2> (Mcompar_o<21>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<21>_cy<3> (Mcompar_o<21>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<21>_cy<4> (Mcompar_o<21>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<21>_cy<5> (Mcompar_o<21>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<21>_cy<6> (Mcompar_o<21>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<21>_cy<7> (Mcompar_o<21>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<21>_cy<8> (Mcompar_o<21>_cy<8>)
+     MUXCY:CI->O          36   0.213   1.349  Mcompar_o<21>_cy<9> (o<21>)
+     LUT5:I4->O            5   0.205   0.943  Mmux_a[0]_GND_17_o_MUX_1436_o1141 (a[22]_GND_17_o_MUX_1414_o)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_o<20>_lut<1> (Mcompar_o<20>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_o<20>_cy<1> (Mcompar_o<20>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<20>_cy<2> (Mcompar_o<20>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<20>_cy<3> (Mcompar_o<20>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<20>_cy<4> (Mcompar_o<20>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<20>_cy<5> (Mcompar_o<20>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<20>_cy<6> (Mcompar_o<20>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<20>_cy<7> (Mcompar_o<20>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<20>_cy<8> (Mcompar_o<20>_cy<8>)
+     MUXCY:CI->O          48   0.213   1.520  Mcompar_o<20>_cy<9> (o<20>)
+     LUT3:I2->O            3   0.205   0.898  Mmux_a[0]_GND_17_o_MUX_1540_o1121 (a[20]_GND_17_o_MUX_1520_o)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_o<19>_lutdi (Mcompar_o<19>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_o<19>_cy<0> (Mcompar_o<19>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<19>_cy<1> (Mcompar_o<19>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<19>_cy<2> (Mcompar_o<19>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<19>_cy<3> (Mcompar_o<19>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<19>_cy<4> (Mcompar_o<19>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<19>_cy<5> (Mcompar_o<19>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<19>_cy<6> (Mcompar_o<19>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<19>_cy<7> (Mcompar_o<19>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<19>_cy<8> (Mcompar_o<19>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<19>_cy<9> (Mcompar_o<19>_cy<9>)
+     MUXCY:CI->O          42   0.213   1.434  Mcompar_o<19>_cy<10> (o<19>)
+     LUT5:I4->O            5   0.205   0.943  Mmux_a[0]_GND_17_o_MUX_1642_o1121 (a[20]_GND_17_o_MUX_1622_o)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_o<18>_lut<1> (Mcompar_o<18>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_o<18>_cy<1> (Mcompar_o<18>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<18>_cy<2> (Mcompar_o<18>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<18>_cy<3> (Mcompar_o<18>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<18>_cy<4> (Mcompar_o<18>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<18>_cy<5> (Mcompar_o<18>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<18>_cy<6> (Mcompar_o<18>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<18>_cy<7> (Mcompar_o<18>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<18>_cy<8> (Mcompar_o<18>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<18>_cy<9> (Mcompar_o<18>_cy<9>)
+     MUXCY:CI->O          56   0.213   1.588  Mcompar_o<18>_cy<10> (o<18>)
+     LUT3:I2->O            3   0.205   0.898  Mmux_a[0]_GND_17_o_MUX_1742_o191 (a[18]_GND_17_o_MUX_1724_o)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_o<17>_lutdi (Mcompar_o<17>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_o<17>_cy<0> (Mcompar_o<17>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<17>_cy<1> (Mcompar_o<17>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<17>_cy<2> (Mcompar_o<17>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<17>_cy<3> (Mcompar_o<17>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<17>_cy<4> (Mcompar_o<17>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<17>_cy<5> (Mcompar_o<17>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<17>_cy<6> (Mcompar_o<17>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<17>_cy<7> (Mcompar_o<17>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<17>_cy<8> (Mcompar_o<17>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<17>_cy<9> (Mcompar_o<17>_cy<9>)
+     MUXCY:CI->O          48   0.213   1.520  Mcompar_o<17>_cy<10> (o<17>)
+     LUT5:I4->O            5   0.205   0.943  Mmux_a[0]_GND_17_o_MUX_1840_o191 (a[18]_GND_17_o_MUX_1822_o)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_o<16>_lut<1> (Mcompar_o<16>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_o<16>_cy<1> (Mcompar_o<16>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<16>_cy<2> (Mcompar_o<16>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<16>_cy<3> (Mcompar_o<16>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<16>_cy<4> (Mcompar_o<16>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<16>_cy<5> (Mcompar_o<16>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<16>_cy<6> (Mcompar_o<16>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<16>_cy<7> (Mcompar_o<16>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<16>_cy<8> (Mcompar_o<16>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<16>_cy<9> (Mcompar_o<16>_cy<9>)
+     MUXCY:CI->O          64   0.213   1.640  Mcompar_o<16>_cy<10> (o<16>)
+     LUT3:I2->O            3   0.205   0.898  Mmux_a[0]_GND_17_o_MUX_1936_o171 (a[16]_GND_17_o_MUX_1920_o)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_o<15>_lutdi (Mcompar_o<15>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_o<15>_cy<0> (Mcompar_o<15>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<15>_cy<1> (Mcompar_o<15>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<15>_cy<2> (Mcompar_o<15>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<15>_cy<3> (Mcompar_o<15>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<15>_cy<4> (Mcompar_o<15>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<15>_cy<5> (Mcompar_o<15>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<15>_cy<6> (Mcompar_o<15>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<15>_cy<7> (Mcompar_o<15>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<15>_cy<8> (Mcompar_o<15>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<15>_cy<9> (Mcompar_o<15>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<15>_cy<10> (Mcompar_o<15>_cy<10>)
+     MUXCY:CI->O          55   0.213   1.581  Mcompar_o<15>_cy<11> (o<15>)
+     LUT5:I4->O            5   0.205   0.943  Mmux_a[0]_GND_17_o_MUX_2030_o171 (a[16]_GND_17_o_MUX_2014_o)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_o<14>_lut<1> (Mcompar_o<14>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_o<14>_cy<1> (Mcompar_o<14>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<14>_cy<2> (Mcompar_o<14>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<14>_cy<3> (Mcompar_o<14>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<14>_cy<4> (Mcompar_o<14>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<14>_cy<5> (Mcompar_o<14>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<14>_cy<6> (Mcompar_o<14>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<14>_cy<7> (Mcompar_o<14>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<14>_cy<8> (Mcompar_o<14>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<14>_cy<9> (Mcompar_o<14>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<14>_cy<10> (Mcompar_o<14>_cy<10>)
+     MUXCY:CI->O          73   0.213   1.700  Mcompar_o<14>_cy<11> (o<14>)
+     LUT3:I2->O            3   0.205   0.898  Mmux_a[0]_GND_17_o_MUX_2122_o151 (a[14]_GND_17_o_MUX_2108_o)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_o<13>_lutdi (Mcompar_o<13>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_o<13>_cy<0> (Mcompar_o<13>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<13>_cy<1> (Mcompar_o<13>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<13>_cy<2> (Mcompar_o<13>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<13>_cy<3> (Mcompar_o<13>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<13>_cy<4> (Mcompar_o<13>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<13>_cy<5> (Mcompar_o<13>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<13>_cy<6> (Mcompar_o<13>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<13>_cy<7> (Mcompar_o<13>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<13>_cy<8> (Mcompar_o<13>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<13>_cy<9> (Mcompar_o<13>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<13>_cy<10> (Mcompar_o<13>_cy<10>)
+     MUXCY:CI->O          61   0.213   1.621  Mcompar_o<13>_cy<11> (o<13>)
+     LUT5:I4->O            5   0.205   0.943  Mmux_a[0]_GND_17_o_MUX_2212_o151 (a[14]_GND_17_o_MUX_2198_o)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_o<12>_lut<1> (Mcompar_o<12>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_o<12>_cy<1> (Mcompar_o<12>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<12>_cy<2> (Mcompar_o<12>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<12>_cy<3> (Mcompar_o<12>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<12>_cy<4> (Mcompar_o<12>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<12>_cy<5> (Mcompar_o<12>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<12>_cy<6> (Mcompar_o<12>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<12>_cy<7> (Mcompar_o<12>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<12>_cy<8> (Mcompar_o<12>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<12>_cy<9> (Mcompar_o<12>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<12>_cy<10> (Mcompar_o<12>_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<12>_cy<11> (Mcompar_o<12>_cy<11>)
+     MUXCY:CI->O          81   0.213   1.752  Mcompar_o<12>_cy<12> (o<12>)
+     LUT3:I2->O            3   0.205   0.898  Mmux_a[0]_GND_17_o_MUX_2300_o131 (a[12]_GND_17_o_MUX_2288_o)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_o<11>_lutdi (Mcompar_o<11>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_o<11>_cy<0> (Mcompar_o<11>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<11>_cy<1> (Mcompar_o<11>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<11>_cy<2> (Mcompar_o<11>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<11>_cy<3> (Mcompar_o<11>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<11>_cy<4> (Mcompar_o<11>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<11>_cy<5> (Mcompar_o<11>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<11>_cy<6> (Mcompar_o<11>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<11>_cy<7> (Mcompar_o<11>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<11>_cy<8> (Mcompar_o<11>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<11>_cy<9> (Mcompar_o<11>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<11>_cy<10> (Mcompar_o<11>_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<11>_cy<11> (Mcompar_o<11>_cy<11>)
+     MUXCY:CI->O          67   0.213   1.660  Mcompar_o<11>_cy<12> (o<11>)
+     LUT5:I4->O            5   0.205   0.943  Mmux_a[0]_GND_17_o_MUX_2386_o131 (a[12]_GND_17_o_MUX_2374_o)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_o<10>_lut<1> (Mcompar_o<10>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_o<10>_cy<1> (Mcompar_o<10>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<10>_cy<2> (Mcompar_o<10>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<10>_cy<3> (Mcompar_o<10>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<10>_cy<4> (Mcompar_o<10>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<10>_cy<5> (Mcompar_o<10>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<10>_cy<6> (Mcompar_o<10>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<10>_cy<7> (Mcompar_o<10>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<10>_cy<8> (Mcompar_o<10>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<10>_cy<9> (Mcompar_o<10>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<10>_cy<10> (Mcompar_o<10>_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<10>_cy<11> (Mcompar_o<10>_cy<11>)
+     MUXCY:CI->O          89   0.213   1.805  Mcompar_o<10>_cy<12> (o<10>)
+     LUT3:I2->O            3   0.205   0.898  Mmux_a[0]_GND_17_o_MUX_2470_o111 (a[10]_GND_17_o_MUX_2460_o)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_o<9>_lutdi (Mcompar_o<9>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_o<9>_cy<0> (Mcompar_o<9>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<9>_cy<1> (Mcompar_o<9>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<9>_cy<2> (Mcompar_o<9>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<9>_cy<3> (Mcompar_o<9>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<9>_cy<4> (Mcompar_o<9>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<9>_cy<5> (Mcompar_o<9>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<9>_cy<6> (Mcompar_o<9>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<9>_cy<7> (Mcompar_o<9>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<9>_cy<8> (Mcompar_o<9>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<9>_cy<9> (Mcompar_o<9>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<9>_cy<10> (Mcompar_o<9>_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<9>_cy<11> (Mcompar_o<9>_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<9>_cy<12> (Mcompar_o<9>_cy<12>)
+     MUXCY:CI->O          73   0.213   1.700  Mcompar_o<9>_cy<13> (o<9>)
+     LUT5:I4->O            5   0.205   0.943  Mmux_a[0]_GND_17_o_MUX_2552_o111 (a[10]_GND_17_o_MUX_2542_o)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_o<8>_lut<1> (Mcompar_o<8>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_o<8>_cy<1> (Mcompar_o<8>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<8>_cy<2> (Mcompar_o<8>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<8>_cy<3> (Mcompar_o<8>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<8>_cy<4> (Mcompar_o<8>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<8>_cy<5> (Mcompar_o<8>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<8>_cy<6> (Mcompar_o<8>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<8>_cy<7> (Mcompar_o<8>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<8>_cy<8> (Mcompar_o<8>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<8>_cy<9> (Mcompar_o<8>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<8>_cy<10> (Mcompar_o<8>_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<8>_cy<11> (Mcompar_o<8>_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<8>_cy<12> (Mcompar_o<8>_cy<12>)
+     MUXCY:CI->O          97   0.213   1.858  Mcompar_o<8>_cy<13> (o<8>)
+     LUT3:I2->O            3   0.205   0.898  Mmux_a[0]_GND_17_o_MUX_2632_o1301 (a[8]_GND_17_o_MUX_2624_o)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_o<7>_lutdi (Mcompar_o<7>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_o<7>_cy<0> (Mcompar_o<7>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<7>_cy<1> (Mcompar_o<7>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<7>_cy<2> (Mcompar_o<7>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<7>_cy<3> (Mcompar_o<7>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<7>_cy<4> (Mcompar_o<7>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<7>_cy<5> (Mcompar_o<7>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<7>_cy<6> (Mcompar_o<7>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<7>_cy<7> (Mcompar_o<7>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<7>_cy<8> (Mcompar_o<7>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<7>_cy<9> (Mcompar_o<7>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<7>_cy<10> (Mcompar_o<7>_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<7>_cy<11> (Mcompar_o<7>_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<7>_cy<12> (Mcompar_o<7>_cy<12>)
+     MUXCY:CI->O          79   0.213   1.739  Mcompar_o<7>_cy<13> (o<7>)
+     LUT5:I4->O            5   0.205   0.943  Mmux_a[0]_GND_17_o_MUX_2710_o1301 (a[8]_GND_17_o_MUX_2702_o)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_o<6>_lut<1> (Mcompar_o<6>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_o<6>_cy<1> (Mcompar_o<6>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<6>_cy<2> (Mcompar_o<6>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<6>_cy<3> (Mcompar_o<6>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<6>_cy<4> (Mcompar_o<6>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<6>_cy<5> (Mcompar_o<6>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<6>_cy<6> (Mcompar_o<6>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<6>_cy<7> (Mcompar_o<6>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<6>_cy<8> (Mcompar_o<6>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<6>_cy<9> (Mcompar_o<6>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<6>_cy<10> (Mcompar_o<6>_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<6>_cy<11> (Mcompar_o<6>_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<6>_cy<12> (Mcompar_o<6>_cy<12>)
+     MUXCY:CI->O         105   0.213   1.891  Mcompar_o<6>_cy<13> (o<6>)
+     LUT3:I2->O            3   0.205   0.898  Mmux_a[0]_GND_17_o_MUX_2786_o1281 (a[6]_GND_17_o_MUX_2780_o)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_o<5>_lutdi (Mcompar_o<5>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_o<5>_cy<0> (Mcompar_o<5>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<5>_cy<1> (Mcompar_o<5>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<5>_cy<2> (Mcompar_o<5>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<5>_cy<3> (Mcompar_o<5>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<5>_cy<4> (Mcompar_o<5>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<5>_cy<5> (Mcompar_o<5>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<5>_cy<6> (Mcompar_o<5>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<5>_cy<7> (Mcompar_o<5>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<5>_cy<8> (Mcompar_o<5>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<5>_cy<9> (Mcompar_o<5>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<5>_cy<10> (Mcompar_o<5>_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<5>_cy<11> (Mcompar_o<5>_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<5>_cy<12> (Mcompar_o<5>_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<5>_cy<13> (Mcompar_o<5>_cy<13>)
+     MUXCY:CI->O          85   0.213   1.779  Mcompar_o<5>_cy<14> (o<5>)
+     LUT5:I4->O            5   0.205   0.943  Mmux_a[0]_GND_17_o_MUX_2860_o1281 (a[6]_GND_17_o_MUX_2854_o)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_o<4>_lut<1> (Mcompar_o<4>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_o<4>_cy<1> (Mcompar_o<4>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<4>_cy<2> (Mcompar_o<4>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<4>_cy<3> (Mcompar_o<4>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<4>_cy<4> (Mcompar_o<4>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<4>_cy<5> (Mcompar_o<4>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<4>_cy<6> (Mcompar_o<4>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<4>_cy<7> (Mcompar_o<4>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<4>_cy<8> (Mcompar_o<4>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<4>_cy<9> (Mcompar_o<4>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<4>_cy<10> (Mcompar_o<4>_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<4>_cy<11> (Mcompar_o<4>_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<4>_cy<12> (Mcompar_o<4>_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<4>_cy<13> (Mcompar_o<4>_cy<13>)
+     MUXCY:CI->O         114   0.213   1.914  Mcompar_o<4>_cy<14> (o<4>)
+     LUT3:I2->O            4   0.205   0.931  Mmux_a[0]_GND_17_o_MUX_2932_o1261 (a[4]_GND_17_o_MUX_2928_o)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_o<3>_lutdi (Mcompar_o<3>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_o<3>_cy<0> (Mcompar_o<3>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<3>_cy<1> (Mcompar_o<3>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<3>_cy<2> (Mcompar_o<3>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<3>_cy<3> (Mcompar_o<3>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<3>_cy<4> (Mcompar_o<3>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<3>_cy<5> (Mcompar_o<3>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<3>_cy<6> (Mcompar_o<3>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<3>_cy<7> (Mcompar_o<3>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<3>_cy<8> (Mcompar_o<3>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<3>_cy<9> (Mcompar_o<3>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<3>_cy<10> (Mcompar_o<3>_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<3>_cy<11> (Mcompar_o<3>_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<3>_cy<12> (Mcompar_o<3>_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<3>_cy<13> (Mcompar_o<3>_cy<13>)
+     MUXCY:CI->O         116   0.213   1.920  Mcompar_o<3>_cy<14> (o<3>)
+     LUT3:I2->O            3   0.205   0.898  Mmux_a[0]_GND_17_o_MUX_3002_o1251 (a[3]_GND_17_o_MUX_2999_o)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_o<2>_lutdi (Mcompar_o<2>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_o<2>_cy<0> (Mcompar_o<2>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<2>_cy<1> (Mcompar_o<2>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<2>_cy<2> (Mcompar_o<2>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<2>_cy<3> (Mcompar_o<2>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<2>_cy<4> (Mcompar_o<2>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<2>_cy<5> (Mcompar_o<2>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<2>_cy<6> (Mcompar_o<2>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<2>_cy<7> (Mcompar_o<2>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<2>_cy<8> (Mcompar_o<2>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<2>_cy<9> (Mcompar_o<2>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<2>_cy<10> (Mcompar_o<2>_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<2>_cy<11> (Mcompar_o<2>_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<2>_cy<12> (Mcompar_o<2>_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<2>_cy<13> (Mcompar_o<2>_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<2>_cy<14> (Mcompar_o<2>_cy<14>)
+     MUXCY:CI->O          92   0.213   1.825  Mcompar_o<2>_cy<15> (o<2>)
+     LUT3:I2->O            2   0.205   0.864  Mmux_a[0]_GND_17_o_MUX_3070_o1221 (a[2]_GND_17_o_MUX_3068_o)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_o<1>_lutdi (Mcompar_o<1>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_o<1>_cy<0> (Mcompar_o<1>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<1>_cy<1> (Mcompar_o<1>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<1>_cy<2> (Mcompar_o<1>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<1>_cy<3> (Mcompar_o<1>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<1>_cy<4> (Mcompar_o<1>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<1>_cy<5> (Mcompar_o<1>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<1>_cy<6> (Mcompar_o<1>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<1>_cy<7> (Mcompar_o<1>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<1>_cy<8> (Mcompar_o<1>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<1>_cy<9> (Mcompar_o<1>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<1>_cy<10> (Mcompar_o<1>_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<1>_cy<11> (Mcompar_o<1>_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<1>_cy<12> (Mcompar_o<1>_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<1>_cy<13> (Mcompar_o<1>_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<1>_cy<14> (Mcompar_o<1>_cy<14>)
+     MUXCY:CI->O          33   0.213   1.306  Mcompar_o<1>_cy<15> (o<1>)
+     LUT3:I2->O            2   0.205   0.864  Mmux_n3430121 (n3430<1>)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_o<0>_lutdi (Mcompar_o<0>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_o<0>_cy<0> (Mcompar_o<0>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<0>_cy<1> (Mcompar_o<0>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<0>_cy<2> (Mcompar_o<0>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<0>_cy<3> (Mcompar_o<0>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<0>_cy<4> (Mcompar_o<0>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<0>_cy<5> (Mcompar_o<0>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<0>_cy<6> (Mcompar_o<0>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<0>_cy<7> (Mcompar_o<0>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<0>_cy<8> (Mcompar_o<0>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<0>_cy<9> (Mcompar_o<0>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<0>_cy<10> (Mcompar_o<0>_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<0>_cy<11> (Mcompar_o<0>_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<0>_cy<12> (Mcompar_o<0>_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<0>_cy<13> (Mcompar_o<0>_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<0>_cy<14> (Mcompar_o<0>_cy<14>)
+     MUXCY:CI->O           2   0.213   0.617  Mcompar_o<0>_cy<15> (o<0>)
+     end scope: 'myALU/SrcA[31]_SrcB[31]_div_39:o<0>'
+     LUT5:I4->O            1   0.205   0.000  Mmux_ALURes427 (ALURes<0>)
+     end scope: 'myALU:ALURes<0>'
+     FD:D                      0.102          ALUResE_Reg_0
+    ----------------------------------------
+    Total                    109.243ns (31.229ns logic, 78.014ns route)
+                                       (28.6% logic, 71.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ClkIn'
+  Total number of paths / destination ports: 160 / 40
+-------------------------------------------------------------------------
+Offset:              6.312ns (Levels of Logic = 4)
+  Source:            PCF_7 (FF)
+  Destination:       led<3> (PAD)
+  Source Clock:      ClkIn rising 0.3X
+
+  Data Path: PCF_7 to led<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              32   0.447   1.656  PCF_7 (PCF_7)
+     begin scope: 'myInstruction_memory:ImemRdAddr<7>'
+     LUT6:I0->O            1   0.203   0.580  Mram_InstMem711_SW0 (N61)
+     LUT3:I2->O            3   0.205   0.650  Mram_InstMem711 (Instruction<3>)
+     end scope: 'myInstruction_memory:Instruction<3>'
+     OBUF:I->O                 2.571          led_3_OBUF (led<3>)
+    ----------------------------------------
+    Total                      6.312ns (3.426ns logic, 2.886ns route)
+                                       (54.3% logic, 45.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock ClkIn
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+ClkIn          |  109.243|         |         |         |
+myCtr/_n0222   |         |    2.940|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock myCtr/_n0222
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+ClkIn          |         |         |    2.036|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 23.00 secs
+Total CPU time to Xst completion: 23.34 secs
+ 
+--> 
+
+Total memory usage is 206504 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  146 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

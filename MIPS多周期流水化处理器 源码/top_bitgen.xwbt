@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\JmingProjects\ISE\Lab5_4\top.ncd
+OUTFILE=E:\JmingProjects\ISE\Lab5_4\top.bit
+FAMILY=Spartan6
+PART=xc6slx45-3csg484
+WORKINGDIR=E:\JmingProjects\ISE\Lab5_4
+LICENSE=WebPack
+USER_INFO=__0_0_0

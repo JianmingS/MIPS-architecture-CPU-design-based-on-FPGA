@@ -1,0 +1,42 @@
+Running: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/JmingProjects/ISE/Lab4_2/top_tb_isim_beh.exe -prj E:/JmingProjects/ISE/Lab4_2/top_tb_beh.prj work.top_tb work.glbl 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/JmingProjects/ISE/Lab4_2/ipcore_dir/Clk_gen.v" into library work
+Analyzing Verilog file "E:/JmingProjects/ISE/Lab4_2/signext.v" into library work
+Analyzing Verilog file "E:/JmingProjects/ISE/Lab4_2/register.v" into library work
+Analyzing Verilog file "E:/JmingProjects/ISE/Lab4_2/Instruction_memory.v" into library work
+Analyzing Verilog file "E:/JmingProjects/ISE/Lab4_2/Data_memory.v" into library work
+Analyzing Verilog file "E:/JmingProjects/ISE/Lab4_2/Ctr.v" into library work
+Analyzing Verilog file "E:/JmingProjects/ISE/Lab4_2/ALU.v" into library work
+Analyzing Verilog file "E:/JmingProjects/ISE/Lab4_2/top.v" into library work
+Analyzing Verilog file "E:/JmingProjects/ISE/Lab4_2/top_tb.v" into library work
+Analyzing Verilog file "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 98204 KB
+Fuse CPU Usage: 280 ms
+Compiling module IBUFG
+Compiling module dcm_sp_clock_divide_by_2
+Compiling module dcm_sp_maximum_period_check(cloc...
+Compiling module dcm_sp_maximum_period_check(cloc...
+Compiling module dcm_sp_clock_lost
+Compiling module DCM_SP(CLKFX_DIVIDE=25,CLKFX_MUL...
+Compiling module BUFG
+Compiling module Clk_gen
+Compiling module Ctr
+Compiling module Instruction_memory
+Compiling module register
+Compiling module ALU
+Compiling module Data_memory
+Compiling module signext
+Compiling module top
+Compiling module top_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 3 sub-compilation(s) to finish...
+Compiled 17 Verilog Units
+Built simulation executable E:/JmingProjects/ISE/Lab4_2/top_tb_isim_beh.exe
+Fuse Memory Usage: 104380 KB
+Fuse CPU Usage: 452 ms
